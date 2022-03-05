@@ -1,13 +1,39 @@
-function doMath(add,a,b)
-{
-    let a = 17;
-    let b = 34;
+function doMath(operation,a,b)
+{    
+    let z = 0;
 
-    let z = a + b;
+    if(operation == 'add')
+    {
+        z = a + b;
+    }
+    else if(operation == 'substract')
+    {
+        z = a - b;
+    }
+    else if (operation == 'multiple')
+    {
+        z = a * b;
+    }
+    else if (operation == 'divide')
+    {
+        z = a / b;
+    }
+    else
+    {
+        alert('Ой! Такой функции нету')
+    }
 
     return z;
 }
+ 
+let m = +prompt('Первое число');
 
-let result = z 
+let n = +prompt('Второе число');
+
+let operation = prompt('Введите тип операции');
+
+let result = doMath(operation,m,n);
+
 alert(result);
+
 
